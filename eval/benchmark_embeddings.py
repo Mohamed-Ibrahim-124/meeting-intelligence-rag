@@ -7,10 +7,12 @@ import time
 from pathlib import Path
 
 from clinical_meeting.adapters.chunking.speaker_turn_chunker import SpeakerTurnChunker
-from clinical_meeting.adapters.embeddings.local_st import LocalSentenceTransformerAdapter
+from clinical_meeting.adapters.embeddings.local_st import (
+    LocalSentenceTransformerAdapter,
+)
 from clinical_meeting.adapters.loaders.txt_loader import TxtTranscriptLoader
-from clinical_meeting.services.retrieval import RetrievalService
 from clinical_meeting.adapters.vector.qdrant_adapter import QdrantAdapter
+from clinical_meeting.services.retrieval import RetrievalService
 
 ROOT = Path(__file__).resolve().parents[1]
 GOLDEN = ROOT / "eval" / "golden_qa.json"

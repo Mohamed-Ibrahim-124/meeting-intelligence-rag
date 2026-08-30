@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -10,12 +11,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _ragas_available() -> bool:
+    return importlib.util.find_spec("ragas") is not None
+
+
 async def run_deterministic_eval() -> dict:
-    from clinical_meeting.config import build_llm_provider, get_embedding_provider, get_settings
+    from clinical_meeting.adapters.vector.qdrant_adapter import QdrantAdapter
+    from clinical_meeting.config import (
+        build_llm_provider,
+        get_embedding_provider,
+        get_settings,
+    )
     from clinical_meeting.services.answer import AnswerService
     from clinical_meeting.services.ingestion import IngestionService
     from clinical_meeting.services.retrieval import RetrievalService
-    from clinical_meeting.adapters.vector.qdrant_adapter import QdrantAdapter
 
     golden = json.loads((ROOT / "eval" / "golden_qa.json").read_text(encoding="utf-8"))
     transcript = (ROOT / golden["transcript_file"]).read_text(encoding="utf-8")
@@ -48,11 +57,7 @@ def main() -> None:
         summary = asyncio.run(run_deterministic_eval())
         print(json.dumps(summary, indent=2))
         return
-    try:
-        from ragas import evaluate
-        from ragas.metrics import answer_relevancy, faithfulness
-        from datasets import Dataset
-    except ImportError:
+    if not _ragas_available():
         print("RAGAs not installed. Run deterministic eval only.")
         summary = asyncio.run(run_deterministic_eval())
         print(json.dumps(summary, indent=2))
