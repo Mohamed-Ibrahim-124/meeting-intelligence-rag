@@ -64,6 +64,25 @@ python scripts/seed_samples.py
 
 Try uploading `samples/audio/jfk.wav` on the **Audio** tab to test transcription.
 
+### 5. Verify & capture screenshots
+
+```powershell
+python scripts/smoke_test.py
+python scripts/capture_screenshots.py
+```
+
+See [`docs/SCREENSHOTS.md`](docs/SCREENSHOTS.md) for UI captures.
+
+---
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Home upload](docs/screenshots/01-home-upload.png) | ![Audio tab](docs/screenshots/02-home-audio.png) |
+| ![Meeting detail](docs/screenshots/03-meeting-detail.png) | ![Chat](docs/screenshots/04-meeting-chat.png) |
+| ![Intelligence](docs/screenshots/05-meeting-intelligence.png) | ![API docs](docs/screenshots/06-api-docs.png) |
+
 ---
 
 ## Models & providers
