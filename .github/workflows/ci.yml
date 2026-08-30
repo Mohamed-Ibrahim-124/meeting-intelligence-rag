@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+      - name: Ruff
+        run: ruff check src tests && ruff format --check src tests
+      - name: Mypy
+        run: mypy src
+      - name: Pytest
+        run: pytest --cov=clinical_meeting --cov-report=term-missing
+      - name: Bandit
+        run: bandit -r src -q
+
+  optional-complexity:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install radon vulture
+      - run: radon cc src/clinical_meeting -nc
+      - run: vulture src/clinical_meeting --min-confidence 80
+
+  optional-ragas:
+    runs-on: ubuntu-latest
+    if: ${{ vars.RUN_RAGAS_EVAL == 'true' }}
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ./backend -e ./backend[eval]
+      - run: python eval/run_eval.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LLM_PROVIDER: openai
+          QDRANT_URL: http://localhost:6333

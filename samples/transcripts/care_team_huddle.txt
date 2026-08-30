@@ -1,0 +1,8 @@
+[00:00:10] Dr. Rivera: Care team huddle for Unit 4B. No patient identifiers in this note.
+[00:00:28] Nurse Kim: Post-operative protocol now requires vitals every four hours instead of six.
+[00:00:50] Dr. Rivera: We decided to standardize wound assessment documentation across all shifts.
+[00:01:12] Physical Therapist Adams: Action item — create a one-page wound chart template by Thursday.
+[00:01:34] Nurse Kim: Several staff asked about the new antibiotic stewardship checklist.
+[00:01:55] Dr. Rivera: Agreed to pilot the checklist on Unit 4B for two weeks before hospital-wide rollout.
+[00:02:18] Dietitian Morgan: Action item — follow up with pharmacy on enteral feeding guidelines.
+[00:02:40] Dr. Rivera: Key concern is ensuring handoff notes include mobility status consistently.

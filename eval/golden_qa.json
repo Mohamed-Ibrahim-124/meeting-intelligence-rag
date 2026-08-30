@@ -1,0 +1,126 @@
+{
+  "meeting_id": "trial_protocol_review",
+  "transcript_file": "samples/transcripts/trial_protocol_review.txt",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What hemoglobin threshold was decided for Trial A-102 enrollment?",
+      "type": "decision",
+      "expected_speaker": "Dr. Chen",
+      "expected_keywords": ["hemoglobin", "11"],
+      "answerable": true
+    },
+    {
+      "id": "q2",
+      "question": "What action item did Nurse Patel mention about the consent form?",
+      "type": "action_item",
+      "expected_speaker": "Nurse Patel",
+      "expected_keywords": ["consent form", "Friday"],
+      "answerable": true
+    },
+    {
+      "id": "q3",
+      "question": "What did Dr. Chen say about enrollment criteria?",
+      "type": "speaker_specific",
+      "expected_speaker": "Dr. Chen",
+      "expected_keywords": ["enrollment", "criteria"],
+      "answerable": true
+    },
+    {
+      "id": "q4",
+      "question": "What decision was made about Site 3 enrollment?",
+      "type": "decision",
+      "expected_speaker": "Dr. Chen",
+      "expected_keywords": ["Site 3", "pause"],
+      "answerable": true
+    },
+    {
+      "id": "q5",
+      "question": "What did Pharmacist Lee say about follow up?",
+      "type": "speaker_specific",
+      "expected_speaker": "Pharmacist Lee",
+      "expected_keywords": ["follow up", "audit"],
+      "answerable": true
+    },
+    {
+      "id": "q6",
+      "question": "What is the project's total marketing budget for 2027?",
+      "type": "unanswerable",
+      "expected_speaker": null,
+      "expected_keywords": [],
+      "answerable": false
+    },
+    {
+      "id": "q7",
+      "question": "Which training deadline was set for site coordinators?",
+      "type": "action_item",
+      "expected_speaker": "Nurse Patel",
+      "expected_keywords": ["training", "Wednesday"],
+      "answerable": true
+    },
+    {
+      "id": "q8",
+      "question": "What IRB-related issue was raised about the consent form?",
+      "type": "factual",
+      "expected_speaker": "Nurse Patel",
+      "expected_keywords": ["adverse-event", "IRB"],
+      "answerable": true
+    },
+    {
+      "id": "q9",
+      "question": "Summarize decisions and action items across the meeting.",
+      "type": "multi_segment",
+      "expected_speaker": null,
+      "expected_keywords": ["decided", "action item"],
+      "answerable": true
+    },
+    {
+      "id": "q10",
+      "question": "What weather was discussed during the meeting?",
+      "type": "unanswerable",
+      "expected_speaker": null,
+      "expected_keywords": [],
+      "answerable": false
+    },
+    {
+      "id": "q11",
+      "question": "Who mentioned updating documentation before site activation?",
+      "type": "speaker_specific",
+      "expected_speaker": "Dr. Chen",
+      "expected_keywords": ["documentation", "site activation"],
+      "answerable": true
+    },
+    {
+      "id": "q12",
+      "question": "What drug supply topic did Pharmacist Lee mention?",
+      "type": "factual",
+      "expected_speaker": "Pharmacist Lee",
+      "expected_keywords": ["drug supply", "audit"],
+      "answerable": true
+    },
+    {
+      "id": "q13",
+      "question": "What trial identifier is referenced in enrollment criteria?",
+      "type": "factual",
+      "expected_speaker": "Dr. Chen",
+      "expected_keywords": ["A-102"],
+      "answerable": true
+    },
+    {
+      "id": "q14",
+      "question": "What was the hospital's stock price discussed?",
+      "type": "unanswerable",
+      "expected_speaker": null,
+      "expected_keywords": [],
+      "answerable": false
+    },
+    {
+      "id": "q15",
+      "question": "Which roles participated in the protocol review?",
+      "type": "participants",
+      "expected_speaker": null,
+      "expected_keywords": ["Dr. Chen", "Nurse Patel", "Pharmacist Lee"],
+      "answerable": true
+    }
+  ]
+}

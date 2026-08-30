@@ -1,0 +1,8 @@
+[00:00:08] Product Lead Sarah: Digital health sync for the remote monitoring MVP launch.
+[00:00:25] Engineer Omar: Backend ingestion now validates file types before indexing patient education PDFs.
+[00:00:44] Clinical Advisor Dr. Walsh: We decided to prioritize blood pressure alerts over weight alerts for v1.
+[00:01:05] Product Lead Sarah: Action item — Omar to add audit logging for all alert configuration changes.
+[00:01:28] UX Designer Nina: Usability tests showed clinicians want speaker-attributed meeting summaries in the chart review flow.
+[00:01:50] Engineer Omar: Agreed to expose a read-only API for summary and action-item export.
+[00:02:12] Clinical Advisor Dr. Walsh: Privacy review confirmed no PHI should appear in demo transcripts.
+[00:02:34] Product Lead Sarah: Action item — Nina to deliver updated wireframes for the intelligence panel by Monday.

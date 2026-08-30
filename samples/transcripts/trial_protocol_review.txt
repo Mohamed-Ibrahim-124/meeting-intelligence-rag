@@ -1,0 +1,8 @@
+[00:00:05] Dr. Chen: Good morning. Today we review enrollment criteria for Trial A-102.
+[00:00:22] Nurse Patel: Current consent form lacks the updated adverse-event language from IRB.
+[00:00:41] Dr. Chen: We decided to require hemoglobin above 11 g/dL for enrollment in Trial A-102.
+[00:01:03] Pharmacist Lee: Action item — update the consent form by Friday with IRB language.
+[00:01:23] Dr. Chen: We need to finalize the enrollment criteria documentation before site activation.
+[00:01:45] Nurse Patel: Action item — schedule training for site coordinators on the new criteria by next Wednesday.
+[00:02:10] Dr. Chen: Agreed to pause enrollment at Site 3 until the monitoring visit is complete.
+[00:02:35] Pharmacist Lee: I will follow up on the drug supply chain audit results.

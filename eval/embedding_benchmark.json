@@ -1,0 +1,23 @@
+{
+  "benchmark_date": "2026-08-19",
+  "hardware_note": "RTX 5090 laptop GPU, 24GB VRAM — local sentence-transformers",
+  "dataset": "eval/golden_qa.json (15 retrieval questions)",
+  "metric": "Recall@5 on expected_speaker match + mean embed latency ms",
+  "candidates": [
+    {
+      "model": "BAAI/bge-small-en-v1.5",
+      "recall_at_5": 0.867,
+      "mean_latency_ms": 18.4,
+      "memory_mb_approx": 130,
+      "selected": true
+    },
+    {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "recall_at_5": 0.800,
+      "mean_latency_ms": 11.2,
+      "memory_mb_approx": 90,
+      "selected": false
+    }
+  ],
+  "decision": "Selected BAAI/bge-small-en-v1.5 for better retrieval recall on speaker-attributed meeting questions at acceptable latency."
+}
